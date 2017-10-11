@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>小超微博</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 user-scalable=yes">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/swiper.animate.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/jquery-1.11.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <style type="text/css">
+    	body{
+    		overflow-x: hidden;
+    	}
+    	*{
+    		margin:0;
+    		padding:0;
+    	}
+	    html, body{
+	        position: relative;
+	        height: 100%;
+	    }
+	    body {
+	        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	        font-size: 14px;
+	        color:#000;
+	        margin: 0;
+	        padding: 0;
+	    }
+    	#navbar{
+    		margin: 0;
+    		background-color: rgba(0,0,0,0.5);
+    		border: 0;
+    		transition: 0.5s ease;
+    	}
+    	.navbar-brand{
+    		margin-top: -5px;
+    		color: #ccc;
+    		text-decoration: none;
+    		font-size: 18px;
+    	}
+    	.navbar-brand img{
+    		display: inline-block;
+    	}
+    	@media screen and (max-width: 768px) {
+    		#navbar-nav{
+    			background: #000
+    		}
+		}
+		footer{
+			height: 40px;
+			line-height: 40px;
+			border-top: 1px solid #ccc
+		}
+		footer ul li{
+			padding-top: 10px;
+			color: #777
+		}
+		footer ul li a{
+			color: #777
+		}
+		section{
+			width: 100%;
+			background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506575234687&di=729ef5b22bbff1d8fd2e54a53a8b1e43&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F14%2F79%2F03%2F93H58PICgf9_1024.jpg);
+		}
+		.nr{
+		    background: url(./img/articlebg.png) repeat;
+		    overflow: hidden;
+		    margin: 20px;
+		    border-radius: 8px;
+		    box-shadow: #075498 0px 1px 10px;
+			margin-top: 70px;
+			background: #8ec0ec
+		}
+		.memorial_day {
+		    overflow: hidden;
+		    position: relative;
+		    padding: 60px 100px;
+		}
+		.time_axis {
+		    background: #e9f5fb;
+		    height: 900px;
+		    width: 6px;
+		}
+		.memorial_day ul li{
+			position: absolute;
+		    left: 96px;
+		}
+		.memorial_day ul li span {
+			padding: 20px;
+			background: #fff;
+			margin-top: -50px;
+		    margin-left: 60px;
+		    border-radius: 8px;
+		    display: block;
+		    color: #404040;
+		    width: 800px;
+		    height: 150px;
+		}
+		.memorial_day ul li::before {
+		    content: "";
+		    width: 14px;
+		    height: 14px;
+		    border-radius: 50%;
+		    position: absolute;
+		    background: #0979b1;
+		    border: 3px solid #e9f6fb;
+		}
+		.banner {
+		    height: 180px;
+		    text-align: center;
+		    overflow: hidden;
+		    margin: 30px;
+		    line-height: 30px;
+		    text-shadow: #fff 1px 1px 1px;
+		    background: url(./img/banner_top.jpg) no-repeat -90px center;
+		    color: #333;
+		    padding: 40px 0 0 0;
+		}
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".collapse" style="margin-right: 25px;">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="./img/Preeminent_logo.png" height="30">博客</a>
+            </div>
+            <ul class="nav navbar-nav navbar-collapse collapse navbar-right" role="navigation" id="navbar-nav"> 
+                <li><a href="index.html">主页</a></li>
+                <li><a href="dmoe.html">文章</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="lyb.html">留言</a></li>
+            </ul>
+        </div>
+	</nav>
+	<section>
+		<div class="container">
+			<div class="nr">
+				<div class="banner">
+				    <p data-scroll-reveal="enter top over 2s" data-scroll-reveal-id="2" style="-webkit-transform: translatey(0);transform: translatey(0);opacity: 1;-webkit-transition: -webkit-transform 2s ease-in-out 0s,  opacity 2s ease-in-out 0s;transition: transform 2s ease-in-out 0s, opacity 2s ease-in-out 0s;-webkit-perspective: 1000;-webkit-backface-visibility: hidden;" data-scroll-reveal-initialized="true">我们不停的翻弄着回忆，却再也找不回那时的自己</p>
+				    <p data-scroll-reveal="enter left over 2s after 1s" data-scroll-reveal-id="3" style="-webkit-transform: translatex(0);transform: translatex(0);opacity: 1;-webkit-transition: -webkit-transform 2s ease-in-out 1s,  opacity 2s ease-in-out 1s;transition: transform 2s ease-in-out 1s, opacity 2s ease-in-out 1s;-webkit-perspective: 1000;-webkit-backface-visibility: hidden;" data-scroll-reveal-initialized="true">人生，是一场盛大的遇见。若你懂得，就请珍惜。</p>
+				    <p data-scroll-reveal="enter bottom over 2s after 2s" data-scroll-reveal-id="4" style="-webkit-transform: translatey(0);transform: translatey(0);opacity: 1;-webkit-transition: -webkit-transform 2s ease-in-out 2s,  opacity 2s ease-in-out 2s;transition: transform 2s ease-in-out 2s, opacity 2s ease-in-out 2s;-webkit-perspective: 1000;-webkit-backface-visibility: hidden;" data-scroll-reveal-initialized="true">无论下多久的雨，最后都会有彩虹；无论你多么悲伤，要相信幸福在前方等候.</p>
+				</div>
+				<div class="memorial_day">
+			        <div class="time_axis"></div>
+			        <ul>
+				        <li class="cm">
+				        	<span>前端学习</br>
+							1.具有独立分析的能力，规范化的编程，标准化的代码编写习惯；</br>
+							2.有较强的事业心及责任感，能承受较大的工作压力；</br>
+							3.具有很好的执行力和团队合作意识，工作踏实，认真负责，能够灵活处理工作中的突发事件； </br>
+							4.自学能力强，能够主动的去学习新技术，在软件开发技术上有扎实的基本功，对于编程语言能够灵活运用；</span>
+				        </li>
+				        <li class="cm">
+				        	<span>创建个人博客</br>
+							1.使用Div+Css布局；</br>
+							2.用html、css3以及bootstrap对页面原型进行布局搭建，并进行基本特效的制作；</br>
+							3.使用bootstrap框架、jQuery框架、Swiper框架以及Ajax、实现数据交互功能。</span>
+				        </li>
+				        <li class="cm">、
+				        	<span>加入公司</br>
+							1.负责web端前端的开发 、公司PC端开发与维护工作；</br>
+							2.参与公司项目前端的技术架构，参与编写一些项目所有功能的开发；</br>
+							3.公司新版手机内嵌页的开发与维护工作；</br>
+							4. 公司部分活动与专题页面的开发工作。
+							</span>
+				        </li>
+				        <li class="cm">
+				        	<span>与同事共同完成一个项目</br>
+							1.使用PS对美工的设计搞进行切图；</br>
+							2.用html、css3对页面原型进行布局搭建，并进行基本特效的制作；</br>
+							3.使用vue.js框架、vue-router的链接页面、jQuery框架以及Ajax、完成商户的部分功能。
+							</span>
+				        </li>
+				        <li class="cm">
+				        	<span>自己独立完成</br>
+							1.负责使用jquery，JavaScript完成交互效果；</br>
+							2.用html、css3对页面原型进行布局搭建，并进行基本特效的制作；</br>
+							3.使用vue脚手架、以及vue-resource实现获取数据功能；</br>
+							4.熟练对原生JavaScript 、jQuery的使用。
+							</span>
+				        </li>
+			      </ul>
+			    </div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		for (var i = 0; i < $('.cm').length; i++) {
+			console.log($('.cm')[i])
+			$('.cm').eq(i).css('top',(i*200+100)+'px')
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>小超微博</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 user-scalable=yes">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/swiper.animate.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/jquery-1.11.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <style type="text/css">
+    	body{
+    		overflow-x: hidden;
+    	}
+    	*{
+    		margin:0;
+    		padding:0;
+    	}
+	    html, body{
+	        position: relative;
+	        height: 100%;
+	    }
+	    body {
+	        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	        font-size: 14px;
+	        color:#000;
+	        margin: 0;
+	        padding: 0;
+	    }
+	    .swiper-container {
+	        width: 100%;
+	        height: 500px;
+	    }
+	    .swiper-slide {
+	        text-align: center;
+	        font-size: 18px;
+	    }
+	    .swiper-slide img {
+		   	width: 100%;
+		    height: 100%;
+		    -ms-transform: translate(-50%, -50%);
+		    -webkit-transform: translate(-50%, -50%);
+		    -moz-transform: translate(-50%, -50%);
+		    transform: translate(-50%, -50%);
+		    position: absolute;
+		    left: 50%;
+		    top: 50%;
+	    }
+    	#navbar{
+    		margin: 0;
+    		background-color: rgba(0,0,0,0);
+    		border: 0;
+    		transition: 0.5s ease;
+    	}
+    	.appear{
+    		transition: 0.5s;
+    		color: #ccc;
+    		margin-top: 200px
+    	}
+    	.navbar-brand{
+    		margin-top: -5px;
+    		color: #ccc;
+    		text-decoration: none;
+    		font-size: 18px;
+    	}
+    	.navbar-brand img{
+    		display: inline-block;
+    	}
+    	.shadow{
+    		width: 100%;
+    		height: 100%;
+    		background-color: rgba(0,0,0,0.4);
+    		position: absolute;
+    	}
+    	@media screen and (max-width: 768px) {
+    		.conr li img{
+				height: 150px!important;
+			}
+    		#navbar-nav{
+    			background: #000
+    		}
+		    .swiper-container {
+		        height: 200px;
+		    }
+		    .appear{
+		    	margin-top: 8%
+		    }
+		    .appear h1{
+		    	font-size: 22px;
+		    	margin:5px;
+		    }
+		    .appear h3{
+		    	font-size: 16px;
+		    	margin:5px;
+		    }
+		}
+		@media screen and (max-width: 1200px) {
+			.conr li img{
+				width: 100%;
+				height: 300px;
+			}
+			.conr li .right{
+				padding: 0 10px;
+				width: 100%!important;
+				float: none!important;
+			}
+		}
+		section{
+			background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506575234687&di=729ef5b22bbff1d8fd2e54a53a8b1e43&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F14%2F79%2F03%2F93H58PICgf9_1024.jpg);
+		}
+		#fluid h2{
+			color: #fff;
+			margin: 10px 0;
+			text-align: center;
+		}
+		footer{
+			height: 52px;
+			line-height: 40px;
+			border-top: 1px solid #ccc
+		}
+		footer ul li{
+			padding-top: 10px;
+			color: #777
+		}
+		footer ul li a{
+			color: #777
+		}
+		.conr li{
+			transition: ease 0.5s;
+			border-radius: 8px;
+			margin: 20px 0;
+			width: 100%;
+			background: #f7f7f7;
+			padding:5px;
+		}
+		.conr li a{
+			color: black
+		}
+		.conr li .right{
+			line-height: 25px;
+			float: right;
+			width: 70%;
+		}
+		.conr li .right p{
+			width: 100%
+		}
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".collapse" style="margin-right: 25px;">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="./img/Preeminent_logo.png" height="30">博客</a>
+            </div>
+            <ul class="nav navbar-nav navbar-collapse collapse navbar-right" role="navigation" id="navbar-nav"> 
+                <li><a href="index.html">主页</a></li>
+                <li><a href="dmoe.html">文章</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="lyb.html">留言</a></li>
+            </ul>
+        </div>
+	</nav>
+	<section>
+		<div class="swiper-container" id="swiper-container1">
+	        <div class="swiper-wrapper" id="swiper-wrapper">
+	            <div class="swiper-slide">
+	            	<img src="./img/Preeminent4.png">
+	            	<div class="shadow">
+	            		<div class="ani appear" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+	            			<h1>小超博客</h1>
+	            			<h3 style="font-size: 36px;">Small super blog</h2>
+		            		<h3>Innovation spirit, create more beautiful</h3>
+	            		</div>
+	            	</div>
+	            </div>
+	            <div class="swiper-slide">
+	            	<img src="./img/Preeminent9.png">
+	            	<div class="shadow">
+	            		<div class="ani appear" swiper-animate-effect="flip" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+	            			<h1>自己的目标</h1>
+	            			<h1 style="font-size: 36px;">my own goals</h1>
+	            			<h3>Cheer for yourself and fight for yourself</h3>
+	            		</div>
+	            	</div>
+	            </div>
+	            <div class="swiper-slide">
+	            	<img src="./img/Preeminent8.png">
+	            	<div class="shadow">
+	            		<div class="ani flash animated appear" swiper-animate-effect="flash" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+	            			<h1>学习的内容</h1>
+	            			<h1 style="font-size: 36px;">Learning content</h1>
+	            			<h3>Learn to learn for yourself, and strive for your career</h3>
+	            		</div>
+	            	</div>
+	            </div>
+	            <div class="swiper-slide">
+	            	<img src="./img/Preeminent3.png">
+	            	<div class="shadow">
+	            		<div class="ani flash animated appear" swiper-animate-effect="shake" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+	            			<h1>关于我</h1>
+	            			<h1 style="font-size: 36px;">About me</h1>
+	            			<h3>Learn the application of frameworks such as JS, JQ, bootstrap, swiper, etc.</h3>
+	            		</div>
+	            	</div>
+	            </div>
+	        </div>
+	        <div class="swiper-pagination" id="swiper-pagination1"></div>
+	   	</div>
+	   	<div class="container">
+	   		<div class="container-fluid" id="fluid">
+				<h2>对CSS&HTML、Jquery、Javascript以及框架的了解</h2>
+				<ul class="conr">
+					<li>
+						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507099873&di=dbc1fc8ce901e37d3d5b166f994d758d&imgtype=jpg&er=1&src=http%3A%2F%2Ffile01.16sucai.com%2Fd%2Ffile%2F2010%2F1026%2F20101026011522224.jpg" width="300" height="150">
+						<div class="right">
+							<h3>CSS&HTML</h3>
+							<p>
+								1.css从css1到css3发生了很大的变化：表现和内容相分离；提高页面浏览速度；易于维护和改版；</br>
+								2.增加和很多的样式和效果</br>
+								3.HTML5必须能够尽可能多的兼容这些语言，并提供一个良好的编程环境。简洁的界面和良好的交互成了发展的重点。</br>
+								4.也增加一些标签video audio canvas等等；图形的绘制，多媒体内容，更好的页面结构，更好的形式 处理，和几个api拖放元素，定位，包括网页 应用程序缓存，存储，网络工作者，为了更好地处理今天的互联网应用</br>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506509174580&di=6fa000ba938d2a442fb97bd3ac4c582a&imgtype=0&src=http%3A%2F%2Fsuppore.cn%2Fcontent%2Fuploadfile%2F201612%2Fe8641482166250.jpg" width="300" height="150">
+						<div class="right">
+							<h3>Javascript</h3>
+							<p>
+								JS的进一步发展和完善，现在已经有了一套统一的标准来规范它。值得注意的是，JS是一种嵌入式的脚本语言，也就是说他可以嵌入到任何的Web中，JS 并不与任何具体浏览器相绑定，实际上，它也没有提到用于任何用户输入输出的方法，JS可以为不同种类的宿主环境提供核心的脚本编程能力，因此核心的脚本语言是与任何特定的宿主环境分开进行规定的... ..，Web 浏览器对于 JS 来说是一个宿主环境，但它并不是唯一的宿主环境。事实上，还有不计其数的其他各种环境（例如 Nombas 的 ScriptEase，以及 Macromedia 同时用在 Flash 和 Director MX 中的 ActionScript）可以容纳 JS 实现。
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506507244306&di=996d70a10be0afb62725dcaba8cd855a&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Fdoc%2Fpic%2Fitem%2F43a7d933c895d143c6aaa6a57af082025baf0753.jpg" width="300" height="150">
+						<div class="right">
+							<h3>Jquery</h3>
+							<p>
+								jQuery是一个快速，小巧，功能丰富的JavaScript库。它使HTML文档遍历和操作，事件处理，动画和Ajax等东西变得简单易用，可以在众多浏览器中使用。通过多功能性和可扩展性的结合，jQuery改变了数百万人编写JavaScript的方式；随着技术的不断成熟，出现了很多不同的jq插件； jQuery 极大地简化了 JavaScript 编程
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=722243574,1095667796&fm=27&gp=0.jpg" width="300" height="150">
+						<div class="right">
+							<h3>Bootstrap</h3>
+							<p>
+								Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。 它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3065454767,1549782912&fm=27&gp=0.jpg" width="300" height="150">
+						<div class="right">
+							<h3>Vuejs</h3>
+							<p>
+								Vue.js是一个构建数据驱动的 web 界面的渐进式框架。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。
+								Vue.js 自身不是一个全能框架——它只聚焦于视图层。因此它非常容易学习，非常容易与其它库或已有项目整合。另一方面，在与相关工具和支持库一起使用时，Vue.js 也能完美地驱动复杂的单页应用.易用
+								已经会了HTML,CSS,JavaScript？即刻阅读指南开始构建应用。
+								灵活
+								简单小巧的核心，渐进式技术栈，足以应付任何规模的应用。
+								性能
+								20kb min+gzip 运行大小、超快虚拟 DOM 、最省心的优化。
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+	   	</div>
+	</sectionf>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/swiper.animate.min.js"></script>
+	<script type="text/javascript">
+		$(window).scroll(function(){
+        	var wst =  $(window).scrollTop();
+        	if (wst>'150') {
+        		$('#navbar').css({
+        			background:'rgba(0,0,0,1)',
+        			transition:'0.5s'
+        		})
+        	}if (wst<'100') {
+        		$('#navbar').css({
+        			background:'rgba(0,0,0,0)'
+        		})
+        	}
+    	});
+    	for (var i = 0; i < $('section .conr li').length; i++) {
+    		$('.conr li')[i].onmouseover = function(){
+    			$(this).css({
+    				transform:'scale(1.05)'
+    			})
+    		};
+    		$('.conr li')[i].onmouseout = function(){
+    			$(this).css({
+    				transform:'scale(1)',
+	    		});
+	    	}
+    	}
+	</script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var swiper1 = new Swiper('#swiper-container1', {
+		        pagination: '.swiper-pagination',
+		        loop: true,
+		        autoplay:5000,
+		        spaceBetween: 30,
+		        paginationClickable: true,
+		        onInit: function(swiper){
+				   swiperAnimateCache(swiper);
+				   swiperAnimate(swiper);
+				}, 
+				onSlideChangeEnd: function(swiper){ 
+				   swiperAnimate(swiper);
+				} 
+			});
+		}
+	</script>
+</body>
+</html>
